@@ -1,0 +1,16 @@
+<form>
+    <div class="container">
+        <input type="text" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" placeholder="Username">
+        <button type="button" (click)="getFollowers()">Get followers</button>
+    </div>
+</form>
+<div class="followers" *ngIf="followers.length > 0">
+    <h1>Followers for {{ currentUsername }}</h1>
+    <div class="follower" *ngFor="let follower of followers">
+        <img src="{{ follower.avatar_url }}" class="follower__avatar">
+        <div class="follower__info">
+            <div class="follower__name">{{ follower.login }}</div>
+            <a href="{{ follower.html_url }}" class="follower__link">{{ follower.html_url }}</a>
+        </div>
+    </div>
+</div>

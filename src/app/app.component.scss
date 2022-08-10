@@ -1,0 +1,21 @@
+.follower {
+  display: flex;
+  margin: 20px;
+
+  .follower__avatar {
+    max-width: 100px;
+    border-radius: 50%;
+  }
+
+  .follower__info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    justify-content: space-evenly;
+
+    .follower__name {
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+}
